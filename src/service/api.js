@@ -11,7 +11,7 @@ export async function addUser(user) {
   };
   try {
     let response = await axios(options);
-    // console.log(response);
+    console.log(response);
   } catch (error) {
     console.log(error);
   }
