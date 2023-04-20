@@ -4,7 +4,7 @@ import { nanoid } from 'nanoid';
 export async function addUser(user) {
   user.newId = nanoid();
   let options = {
-    url: 'http://localhost:8000/add',
+    url: 'https://crudappbackend-mbuz.onrender.com/add',
     method: 'post',
     headers: { 'content-type': 'application/json' },
     data: user,
@@ -19,7 +19,7 @@ export async function addUser(user) {
 
 export async function loginUser(user) {
   let options = {
-    url: 'http://localhost:8000/login',
+    url: 'https://crudappbackend-mbuz.onrender.com/login',
     method: 'post',
     headers: { 'content-type': 'application/json' },
     data: user,
@@ -34,7 +34,7 @@ export async function loginUser(user) {
 
 export async function getUsers() {
   let options = {
-    url: 'http://localhost:8000/get',
+    url: 'https://crudappbackend-mbuz.onrender.com/get',
     method: 'get',
     headers: { 'content-type': 'application/json' },
   };
@@ -49,7 +49,7 @@ export async function getUsers() {
 
 export async function getUser(name) {
   let options = {
-    url: `http://localhost:8000/read/${name}`,
+    url: `https://crudappbackend-mbuz.onrender.com/read/${name}`,
     method: 'get',
     headers: { 'content-type': 'application/json' },
   };
@@ -64,7 +64,7 @@ export async function getUser(name) {
 
 export async function editUser(user) {
   let options = {
-    url: `http://localhost:8000/edit/${user.newId}`,
+    url: `https://crudappbackend-mbuz.onrender.com/edit/${user.newId}`,
     method: 'put',
     headers: { 'content-type': 'application/json' },
     data: user,
@@ -78,7 +78,7 @@ export async function editUser(user) {
 }
 export async function deleteUser(id) {
   let options = {
-    url: `http://localhost:8000/delete/${id}`,
+    url: `https://crudappbackend-mbuz.onrender.com/delete/${id}`,
     method: 'delete',
     headers: { 'content-type': 'application/json' },
   };
